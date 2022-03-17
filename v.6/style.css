@@ -1,0 +1,125 @@
+@font-face {
+    font-family: gui;
+    src: url(assets/Satisfy-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    overflow: hidden;
+}
+
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    transition: filter 0.3s;
+}
+
+hr.Pbullet{
+    position: absolute;
+    width: 15px;
+    border: 1px solid red;
+    transform: rotate(90deg);
+    z-index: 7;
+}
+
+div.scene{
+    width: 100%;
+    height: 100%;
+}
+
+div.gui{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+}
+
+div.gui > div{
+    font-family: gui;
+    font-size: 40px;
+    margin: 20px;
+    position: absolute;
+}
+
+div.gui > div.score{
+    text-shadow: 0 0 20px greenyellow;
+    right: 20px;
+}
+
+div.gui > div.hp{
+    text-shadow: 0 0 30px rgb(252, 0, 0);
+    left: 20px;
+}
+
+div.player {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    transform: rotate(-90deg);
+    z-index: 9;
+}
+
+div.enemy {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    transform: rotate(-90deg);
+    z-index: 8;
+}
+
+div.gui > div.blur{
+    margin: 0;
+    position: fixed;
+    background-color: black;
+    opacity: .6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+div.gui > div.start{
+    margin: 0;
+    position: fixed;
+    background-color: rgb(29, 29, 29);
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 20%;
+    height: 25%;
+    pointer-events: all;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+div.gui > div.start > button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 50%;
+    height: 40%;
+    border-radius: 40px;
+    font-family: gui;
+    font-size: 50px;
+    background-color: rgb(54, 201, 49);
+    box-shadow: 0 0 10px greenyellow;
+    cursor: pointer;
+    transition: box-shadow .4s;
+    border: 3px solid black;
+}
+
+div.gui > div.start > button:hover{
+    box-shadow: 0 0 30px greenyellow;
+    transition: box-shadow .4s;
+}
